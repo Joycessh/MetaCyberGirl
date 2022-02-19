@@ -1,3 +1,6 @@
+/** @license URI.js v4.4.1 (c) 2011 Gary Court. License: http://github.com/garycourt/uri-js */
+
+
 /*!
  * Block below copied from Protovis: http://mbostock.github.com/protovis/
  * Copyright 2010 Stanford Visualization Group
@@ -7,6 +10,18 @@
 /*!
  * quantize.js Copyright 2008 Nick Rabinowitz.
  * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
+ */
+
+/*! crc32.js (C) 2014-present SheetJS -- http://sheetjs.com */
+
+
+/**
+ * [js-sha3]{@link https://github.com/emn178/js-sha3}
+ *
+ * @version 0.7.0
+ * @author Chen, Yi-Cyuan [emn178@gmail.com]
+ * @copyright Chen, Yi-Cyuan 2015-2017
+ * @license MIT
  */
 
 
@@ -19,9 +34,158 @@ object-assign
 /*!
  * The buffer module from node.js, for the browser.
  *
+ * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * @license  MIT
+ */
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+
+/*!
+  * prr
+  * (c) 2013 Rod Vagg <rod@vagg.org>
+  * https://github.com/rvagg/prr
+  * License: MIT
+  */
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
  * @author   Feross Aboukhadijeh <http://feross.org>
  * @license  MIT
  */
+
+/*!
+ * async
+ * https://github.com/caolan/async
+ *
+ * Copyright 2010-2014 Caolan McMahon
+ * Released under the MIT license
+ */
+
+/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+/*!
+ * vue-qrcode v1.0.0
+ * https://xkeshi.github.io/vue-qrcode
+ *
+ * Copyright 2017-present Chen Fengyuan
+ * Released under the MIT license
+ *
+ * Date: 2018-06-20T03:42:27.281Z
+ */
+
+/*!
+ * Block below copied from Protovis: http://mbostock.github.com/protovis/
+ * Copyright 2010 Stanford Visualization Group
+ * Licensed under the BSD License: http://www.opensource.org/licenses/bsd-license.php
+ */
+
+
+/*! https://mths.be/punycode v1.4.1 by @mathias */
+
+/**
+ * Wrapper for built-in http.js to emulate the browser XMLHttpRequest object.
+ *
+ * This can be used with JS designed for browsers to improve reuse of code and
+ * allow the use of existing libraries.
+ *
+ * Usage: include("XMLHttpRequest.js") and use XMLHttpRequest per W3C specs.
+ *
+ * @author Dan DeFelippi <dan@driverdan.com>
+ * @contributor David Ellis <d.f.ellis@ieee.org>
+ * @license MIT
+ */
+
+/**
+ * [js-sha3]{@link https://github.com/emn178/js-sha3}
+ *
+ * @version 0.5.7
+ * @author Chen, Yi-Cyuan [emn178@gmail.com]
+ * @copyright Chen, Yi-Cyuan 2015-2016
+ * @license MIT
+ */
+
+
+/*!
+ * vue-client-only v0.0.0-semantic-release
+ * (c) 2021-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+/*!
+ * vue-i18n v8.27.0 
+ * (c) 2022 kazuya kawaguchi
+ * Released under the MIT License.
+ */
+
+/*!
+ * vue-no-ssr v1.1.1
+ * (c) 2018-present egoist <0x142857@gmail.com>
+ * Released under the MIT License.
+ */
+
+/**
+  * vue-class-component v6.3.2
+  * (c) 2015-present Evan You
+  * @license MIT
+  */
+
+/**
+ * [js-sha3]{@link https://github.com/emn178/js-sha3}
+ *
+ * @version 0.7.0
+ * @author Chen, Yi-Cyuan [emn178@gmail.com]
+ * @copyright Chen, Yi-Cyuan 2015-2017
+ * @license MIT
+ */
+
+
+/*!
+ * async
+ * https://github.com/caolan/async
+ *
+ * Copyright 2010-2014 Caolan McMahon
+ * Released under the MIT license
+ */
+
+/*!
+* Proton v4.2.1
+* https://github.com/drawcall/Proton
+*
+* Copyright 2013-2020, A-JIE
+* Licensed under the MIT license
+* http://www.opensource.org/licenses/mit-license
+*
+*/
+
+/*!
+* RAFManager v0.1.0
+*
+* Copyright 2018-2018, ajiemath <ajiemath@gmail.com>
+* Licensed under the MIT license
+* http://www.opensource.org/licenses/mit-license
+*
+*/
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -39,8 +203,6 @@ PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 
 /*! https://mths.be/punycode v1.4.1 by @mathias */
-
-/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
@@ -71,19 +233,6 @@ PERFORMANCE OF THIS SOFTWARE.
 
 //! moment.js locale configuration
 
-
-/*!
- * quantize.js Copyright 2008 Nick Rabinowitz.
- * Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php
- */
-
-/*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
- * @license  MIT
- */
-
 /**
  * [js-sha3]{@link https://github.com/emn178/js-sha3}
  *
@@ -105,134 +254,6 @@ PERFORMANCE OF THIS SOFTWARE.
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  */
 
-/**
- * [js-sha3]{@link https://github.com/emn178/js-sha3}
- *
- * @version 0.5.7
- * @author Chen, Yi-Cyuan [emn178@gmail.com]
- * @copyright Chen, Yi-Cyuan 2015-2016
- * @license MIT
- */
-
-/*
-object-assign
-(c) Sindre Sorhus
-@license MIT
-*/
-
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
-
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-
-
-/** @license URI.js v4.4.1 (c) 2011 Gary Court. License: http://github.com/garycourt/uri-js */
-
-
-/*!
-  * prr
-  * (c) 2013 Rod Vagg <rod@vagg.org>
-  * https://github.com/rvagg/prr
-  * License: MIT
-  */
-
-/*!
- * async
- * https://github.com/caolan/async
- *
- * Copyright 2010-2014 Caolan McMahon
- * Released under the MIT license
- */
-
-
-/**
- * Wrapper for built-in http.js to emulate the browser XMLHttpRequest object.
- *
- * This can be used with JS designed for browsers to improve reuse of code and
- * allow the use of existing libraries.
- *
- * Usage: include("XMLHttpRequest.js") and use XMLHttpRequest per W3C specs.
- *
- * @author Dan DeFelippi <dan@driverdan.com>
- * @contributor David Ellis <d.f.ellis@ieee.org>
- * @license MIT
- */
-
-
-/**
- * [js-sha3]{@link https://github.com/emn178/js-sha3}
- *
- * @version 0.7.0
- * @author Chen, Yi-Cyuan [emn178@gmail.com]
- * @copyright Chen, Yi-Cyuan 2015-2017
- * @license MIT
- */
-
-
-/*!
- * vue-client-only v0.0.0-semantic-release
- * (c) 2021-present egoist <0x142857@gmail.com>
- * Released under the MIT License.
- */
-
-/*!
- * vue-i18n v8.27.0 
- * (c) 2022 kazuya kawaguchi
- * Released under the MIT License.
- */
-
-/*!
- * vue-no-ssr v1.1.1
- * (c) 2018-present egoist <0x142857@gmail.com>
- * Released under the MIT License.
- */
-
-/**
-  * vue-class-component v6.3.2
-  * (c) 2015-present Evan You
-  * @license MIT
-  */
-
-
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-/*!
- * vue-qrcode v1.0.0
- * https://xkeshi.github.io/vue-qrcode
- *
- * Copyright 2017-present Chen Fengyuan
- * Released under the MIT license
- *
- * Date: 2018-06-20T03:42:27.281Z
- */
-
-
-/*! crc32.js (C) 2014-present SheetJS -- http://sheetjs.com */
-
-
-/*!
- * The buffer module from node.js, for the browser.
- *
- * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
- * @license  MIT
- */
-
-
 /*!
   * vue-router v3.5.3
   * (c) 2021 Evan You
@@ -249,4 +270,12 @@ and limitations under the License.
  * vuex v3.6.2
  * (c) 2021 Evan You
  * @license MIT
+ */
+
+
+/*!
+ * The buffer module from node.js, for the browser.
+ *
+ * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * @license  MIT
  */

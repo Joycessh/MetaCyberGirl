@@ -1,5 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-lg fixed-top p-0">
+  <nav
+    class="navbar navbar-expand-lg fixed-top p-0"
+    role="navigation"
+  >
     <div class="container h-100">
       <div class="row mx-auto ps-x-16 w-100 h-100">
         <nuxt-link
@@ -616,6 +619,7 @@ export default class Navbar extends Vue {
   height: $navbar-local-height;
   background-color: light-color("700");
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  opacity: 0.8;
 
   .navbar-toggler {
     outline: none;

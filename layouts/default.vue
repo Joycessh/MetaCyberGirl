@@ -1,5 +1,9 @@
 <template>
   <div class="container-fluid p-0">
+    <particles-bg
+      type="fountain"
+      :bg="true"
+    />
     <navbar-section />
     <div class="content-container">
       <div class="nuxt-section">
@@ -13,11 +17,13 @@
 <script>
 import NavbarSection from '~/components/navbar'
 import Toast from '~/components/toast'
+import { ParticlesBg } from 'particles-bg-vue'
 
 export default {
   components: {
     NavbarSection,
     Toast,
+    ParticlesBg,
   },
 
   created() {

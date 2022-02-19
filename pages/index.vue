@@ -127,10 +127,19 @@ export default class Index extends Vue {
 <style lang="scss" scoped>
 @import "~assets/css/theme/_theme";
 
+.p-bg {
+  position: "absolute";
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .sticky-top {
   &.tab-header {
     top: $navbar-local-height !important;
-    background-color: light-color("700");
+    // background-color: light-color("700");
   }
   &.sidebar-container {
     top: $navbar-local-height !important;
