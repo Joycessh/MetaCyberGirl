@@ -1,19 +1,17 @@
 <template>
   <div class="container-fluid p-0 m-0 fixed">
     <div class="row p-0 m-0">
-      <div class="col container-fluid sidebar-container d-none d-lg-block sticky-top" />
       <div class="col container-fluid content-container">
-        <div class="row ps-y-16 ps-x-16 sticky-top tab-header">
-          <div
-            class="col-12 col-lg cat-switch d-flex d-lg-none ms-b-16 ms-b-lg-0 justify-content-between justify-content-lg-start"
-          />
-          <div
-            class="col-12 col-lg cat-switch d-none d-lg-flex ms-b-16 ms-b-lg-0 justify-content-between justify-content-lg-start"
-          />
-          <div
-            class="col-12 col-lg search-sort d-flex justify-content-between justify-content-lg-end"
-          />
+        <div class="row sticky-top tab-header">
+          <div class="container">
+            <img
+              src="~static/img/topbar.jpg"
+              alt="MetaCyberGirl"
+              class="align-self-center"
+            >
+          </div>
         </div>
+        <div class="row ps-y-16 ps-x-16 sticky-top tab-header" />
       </div>
     </div>
 

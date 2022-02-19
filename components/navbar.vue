@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg fixed-top p-0">
-    <div class="container-fluid h-100">
+    <div class="container h-100">
       <div class="row mx-auto ps-x-16 w-100 h-100">
         <nuxt-link
           class="logo-container d-flex"
