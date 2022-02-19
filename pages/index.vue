@@ -1,127 +1,26 @@
 <template>
   <div class="container-fluid p-0 m-0 fixed">
     <div class="row p-0 m-0">
-      <div
-        class="col container-fluid sidebar-container d-none d-lg-block sticky-top"
-      >
-        <category-sidebar
-          :countFor="0"
-          :isLoading="isLoadingTokens"
-        />
-      </div>
+      <div class="col container-fluid sidebar-container d-none d-lg-block sticky-top" />
       <div class="col container-fluid content-container">
         <div class="row ps-y-16 ps-x-16 sticky-top tab-header">
           <div
             class="col-12 col-lg cat-switch d-flex d-lg-none ms-b-16 ms-b-lg-0 justify-content-between justify-content-lg-start"
-          >
-            <categories-selector
-              :countFor="0"
-              class="category-wrapper"
-            />
-          </div>
+          />
           <div
             class="col-12 col-lg cat-switch d-none d-lg-flex ms-b-16 ms-b-lg-0 justify-content-between justify-content-lg-start"
-          >
-            <div
-              v-if="!selectedCategory"
-              class="category d-flex ps-x-16 ps-y-8 cursor-pointer"
-            >
-              <img
-                :src="allCategory.img_url"
-                :alt="allCategory.name"
-                class="icon align-self-center ms-r-12"
-              >
-              <div class="font-body-large align-self-center font-medium">
-                {{ allCategory.name }}
-              </div>
-              <div class="count ps-l-12 font-body-large ml-auto">
-                {{ allCategory.count }} {{ $t("collectibles") }}
-              </div>
-            </div>
-            <div
-              v-if="selectedCategory"
-              class="category d-flex ps-x-16 ps-y-8 cursor-pointer"
-            >
-              <img
-                :src="selectedCategory.img_url"
-                :alt="selectedCategory.name"
-                class="icon align-self-center ms-r-12"
-              >
-              <div class="font-body-large align-self-center font-medium">
-                {{ selectedCategory.name }}
-              </div>
-              <div class="count ps-l-12 font-body-large ml-auto">
-                {{
-                  selectedCategory.count ||
-                    (displayedTokens && displayedTokens.length) ||
-                    0
-                }}
-                {{ $t("collectibles") }}
-              </div>
-            </div>
-          </div>
+          />
           <div
             class="col-12 col-lg search-sort d-flex justify-content-between justify-content-lg-end"
-          >
-            <search-box
-              class="search-box ms-r-0 ms-r-sm-6"
-              placeholder="Search NFT..."
-              :change="handleSearchInput"
-            />
-            <sort-dropdown
-              class="dropdown-filter ms-l-0 ms-l-sm-6"
-              :sortItems="sortItems"
-              :change="onSortSelect"
-            />
-          </div>
-        </div>
-
-        <div
-          class="row ps-x-16 ps-y-40 d-flex justify-content-center justify-content-lg-start"
-        >
-          <no-item
-            v-if="orderFullList.length <= 0 && !isLoadingTokens"
-            class="ps-b-120"
-            :message="emptyMsg"
-          />
-          <no-item
-            v-else-if="searchedTokens.length === 0 && !isLoadingTokens"
-            class="ps-b-120"
-            :message="$t('searchNotFound')"
-          />
-
-          <sell-card
-            v-for="order in searchedTokens"
-            :key="order.id"
-            :order="order"
-          />
-        </div>
-        <div
-          class="row ps-x-16 ps-y-40 d-flex justify-content-center text-center"
-        >
-          <!-- matic loader here -->
-          <button-loader
-            v-if="
-              (hasNextPage && searchedTokens && searchedTokens.length > 0) ||
-                isLoadingTokens
-            "
-            class="mx-auto"
-            :loading="isLoadingTokens"
-            :loadingText="$t('loading')"
-            :text="$t('loadMore')"
-            block
-            lg
-            color="light"
-            :click="loadMore"
           />
         </div>
       </div>
     </div>
 
-    <notification-modal
+    <!-- <notification-modal
       v-if="showNotification"
       @close="onNotificationClose"
-    />
+    /> -->
   </div>
 </template>
 

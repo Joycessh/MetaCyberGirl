@@ -1,6 +1,6 @@
 /* eslint no-param-reassign: 0 */
 import { clearStore, config as configStore } from '~/plugins/localstore'
-import { getAxios } from '~/plugins/axios'
+// import { getAxios } from '~/plugins/axios'
 import app from '~/plugins/app'
 import Vue from 'vue'
 
@@ -107,29 +107,31 @@ export default {
         return
       }
 
-      const response = await getAxios().post('users/login', payload)
-      if (response.status === 200 && response.data.data) {
-        // Store auth token to local store and add user
-        configStore.set('authToken', response.data.auth_token)
-        dispatch('login', response.data.data)
-        app.initNetworks(app.vuexStore)
-        app.initAccount(app.vuexStore)
-      }
-
+      // const response = await getAxios().post('users/login', payload)
+      // if (response.status === 200 && response.data.data) {
+      //   // Store auth token to local store and add user
+      //   configStore.set('authToken', response.data.auth_token)
+      //   dispatch('login', response.data.data)
+      //   app.initNetworks(app.vuexStore)
+      //   app.initAccount(app.vuexStore)
+      // }
+      dispatch('login', payload)
+      app.initNetworks(app.vuexStore)
+      app.initAccount(app.vuexStore)
       return null
     },
 
     async checkLogin({ dispatch }) {
-      try {
-        const response = await getAxios().get('users/details')
-        if (response.status === 200) {
-          dispatch('login', response.data.data)
-        }
-      } catch (err) {
-        if (err.response.status === 401) {
-          dispatch('logout')
-        }
-      }
+      // try {
+      //   const response = await getAxios().get('users/details')
+      //   if (response.status === 200) {
+      //     dispatch('login', response.data.data)
+      //   }
+      // } catch (err) {
+      //   if (err.response.status === 401) {
+      //     dispatch('logout')
+      //   }
+      // }
     },
   },
 }
