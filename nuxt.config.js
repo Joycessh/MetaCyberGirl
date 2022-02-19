@@ -159,6 +159,7 @@ export default {
 
   generate: {
     dir: 'docs',
+    subFolders: false,
   },
 
   sentry: {
