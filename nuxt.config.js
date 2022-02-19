@@ -27,23 +27,23 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: 'Matic - Marketplace',
+    title: 'MetaCyberGirl',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Matic - Marketplace',
+        content: 'MetaCyberGirl',
       },
-      { name: 'og:title', content: 'Matic - Marketplace' },
-      { name: 'og:description', content: 'Matic - Marketplace' },
-      { name: 'og:site_name', content: 'Matic - Marketplace' },
-      { name: 'apple-mobile-web-app-title', content: 'Matic - Marketplace' },
+      { name: 'og:title', content: 'MetaCyberGirl' },
+      { name: 'og:description', content: 'MetaCyberGirl' },
+      { name: 'og:site_name', content: 'MetaCyberGirl' },
+      { name: 'apple-mobile-web-app-title', content: 'MetaCyberGirl' },
       {
         hid: 'description',
         name: 'description',
-        content: 'Matic - Marketplace',
+        content: 'MetaCyberGirl',
       },
     ],
     link: [
@@ -155,6 +155,10 @@ export default {
       config.resolve.alias['nuxt-class-component'] =
         '~/plugins/nuxt-class-component'
     },
+  },
+
+  generate: {
+    dir: 'docs',
   },
 
   sentry: {

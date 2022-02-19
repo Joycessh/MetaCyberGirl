@@ -1,12 +1,13 @@
 {
-  "name": "nft-marketplace",
+  "name": "MetaCyberGirl",
   "version": "1.0.0",
-  "description": "Marketplace for crypto assets",
-  "author": "Matic Network",
+  "description": "MetaCyberGirl",
+  "author": "Joycessh",
   "private": true,
   "scripts": {
     "dev": "cross-env HOST=0.0.0.0 nuxt",
     "build": "cross-env NODE_ENV=production nuxt generate",
+    "generate": "cross-env NODE_ENV=production nuxt generate",
     "start": "serve -p 3000 dist/",
     "precommit": "yarn run lint",
     "postinstall": "npx patch-package",

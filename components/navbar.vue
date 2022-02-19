@@ -25,8 +25,8 @@
           <div class="d-flex">
             <div class="d-flex">
               <img
-                src="~assets/img/open-sea-logo.svg"
-                alt="Open Sea Logo"
+                src="~assets/img/MetaCyberGirl.png"
+                alt="MetaCyberGirl Logo"
                 class="logo align-self-center"
               >
             </div>
@@ -34,13 +34,13 @@
               class="d-flex flex-column justify-content-center logo-desc-container"
             >
               <div>
-                <span class="logo-title">OpenSea</span>
-                <span class="logo-product-name">L2</span>
-                <span class="tag">BETA</span>
+                <span class="logo-title">MetaCyberGirl</span>
+                <!-- <span class="logo-product-name">L1</span>
+                <span class="tag">BETA</span> -->
               </div>
-              <div class="logo-description">
+              <!-- <div class="logo-description">
                 Powered by Matic Network
-              </div>
+              </div> -->
             </div>
           </div>
         </nuxt-link>
