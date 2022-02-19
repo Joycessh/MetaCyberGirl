@@ -24,8 +24,9 @@
   "downloadHere": "Download here",
   "downloadWallet": "Don't have wallet?",
   "home": {
-    "title": "Discover"
+    "title": "Home"
   },
+  "discover": "Discover",
   "account": {
     "title": "My Account",
     "tabs": {

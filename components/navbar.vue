@@ -59,7 +59,16 @@
                 <span class="align-self-center">{{ $t("home.title") }}</span>
               </nuxt-link>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
+              <nuxt-link
+                class="nav-link d-flex justify-content-lg-center"
+                :to="{ name: 'discover' }"
+                :class="{ active: checkIfNestedRoute('discover') }"
+              >
+                <span class="align-self-center">{{ $t("discover") }}</span>
+              </nuxt-link>
+            </li> -->
+            <!-- <li class="nav-item">
               <nuxt-link
                 class="nav-link d-flex justify-content-lg-center"
                 :to="{ name: 'account' }"
@@ -67,8 +76,8 @@
               >
                 <span class="align-self-center">{{ $t("account.title") }}</span>
               </nuxt-link>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
               <nuxt-link
                 class="nav-link d-flex justify-content-lg-center"
                 :to="{ name: 'faq' }"
@@ -76,8 +85,8 @@
               >
                 <span class="align-self-center">{{ $t("faq.title") }}</span>
               </nuxt-link>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
               <a
                 class="nav-link d-flex justify-content-lg-center"
                 href="https://wallet-support.matic.network/portal/en/newticket"
@@ -86,7 +95,7 @@
               >
                 <span class="align-self-center">{{ $t("support.title") }}</span>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item d-md-none">
               <div
                 v-if="user"
