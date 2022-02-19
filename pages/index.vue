@@ -31,14 +31,10 @@ import { mapGetters, mapState } from 'vuex'
 import app from '~/plugins/app'
 import { fuzzysearch } from '~/plugins/helpers/index'
 
-import getAxios from '~/plugins/axios'
-import { VueWatch, VueDebounce } from '~/components/decorator'
-
 import SellCard from '~/components/lego/sell-card'
 import CategoriesSelector from '~/components/lego/categories-selector'
 import SearchBox from '~/components/lego/search-box'
 import SortDropdown from '~/components/lego/sort-dropdown'
-import OrderModel from '~/components/model/order'
 import NoItem from '~/components/lego/no-item'
 
 import CategorySidebar from '~/components/lego/account/category-sidebar'
@@ -106,31 +102,9 @@ export default class Index extends Vue {
   showModal = false;
 
   mounted() {
-    this.$store.dispatch('page/clearFilters')
-    this.$store.dispatch('token/reloadBalances')
-
-    if (!localStorage.getItem('WalletSwapFeature')) {
-      this.onNotificationOpen()
-    }
-  }
-
-  // Wathers
-  @VueWatch('selectedFilters', { immediate: true, deep: true })
-  @VueDebounce(500)
-  async onFilterChanged() {
-    if (this.isCategoryFetching) {
-      return
-    }
-    this.hasNextPage = true
-    this.orderFullList.length = 0
-    this.$store.commit('page/setIsCategoryFetching', true)
-    await this.fetchOrders({ filtering: true })
-    this.$store.commit('page/setIsCategoryFetching', false)
-  }
-
-  // handlers
-  onSortSelect(item) {
-    this.$store.commit('page/selectedSort', item.filter)
+    // if (!localStorage.getItem('WalletSwapFeature')) {
+    //   this.onNotificationOpen()
+    // }
   }
 
   onNotificationOpen() {
@@ -148,90 +122,6 @@ export default class Index extends Vue {
 
   onModalClose() {
     this.showModal = false
-  }
-
-  handleSearchInput(val) {
-    const formattedString = val.trim()
-    this.$store.commit('page/setSearchString', formattedString)
-  }
-
-  // Get
-  get displayedTokens() {
-    return this.orderFullList || []
-  }
-
-  get searchedTokens() {
-    return this.orderFullList
-  }
-
-  get ifCategory() {
-    return this.selectedFilters.selectedCategory
-      ? `&categoryArray=[${this.selectedFilters.selectedCategory.id}]`
-      : '&categoryArray=[]'
-  }
-
-  get ifSort() {
-    return this.selectedFilters.selectedSort
-      ? `&sort=${this.selectedFilters.selectedSort}`
-      : `&sort=${this.sortItems[0].filter}`
-  }
-
-  // async
-
-  async fetchOrders(options = {}) {
-    // Do not remove data while fetching
-    if (!this.hasNextPage) {
-      return
-    }
-    this.isLoadingTokens = true
-    try {
-      let response
-      let offset = this.orderFullList.length
-
-      if (options && options.filtering) {
-        // Start from page one with new filter
-        offset = 0
-      }
-
-      // Fetch tokens with pagination and filters
-      if (
-        this.selectedFilters.searchString !== null &&
-        this.selectedFilters.searchString.length > 0
-      ) {
-        // with search
-        response = await getAxios().get(
-          `orders/?offset=${offset}&limit=${this.limit}${this.ifCategory}${this.ifSort}&searchString=${this.selectedFilters.searchString}`,
-        )
-      } else {
-        // without search
-        response = await getAxios().get(
-          `orders/?offset=${offset}&limit=${this.limit}${this.ifCategory}${this.ifSort}`,
-        )
-      }
-
-      if (response && response.status === 200 && response.data.data.order) {
-        this.hasNextPage = response.data.data.has_next_page
-        const data = response.data.data.order.map(function(order) {
-          return new OrderModel(order)
-        })
-        if (options && options.filtering) {
-          this.orderFullList = data
-        } else {
-          this.orderFullList = [...this.orderFullList, ...data]
-        }
-      }
-    } catch (error) {
-      console.log(error)
-    }
-    this.isLoadingTokens = false
-  }
-
-  updateCategories() {
-    this.$store.dispatch('category/fetchCategories')
-  }
-
-  async loadMore() {
-    await this.fetchOrders()
   }
 }
 </script>
