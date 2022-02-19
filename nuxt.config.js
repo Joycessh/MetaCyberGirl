@@ -157,6 +157,11 @@ export default {
     },
   },
 
+  // eslint-disable-next-line no-dupe-keys
+  router: {
+    base: '/MetaCyberGirl',
+  },
+
   generate: {
     dir: 'docs',
     subFolders: false,
