@@ -1,20 +1,51 @@
 <template>
-  <div class="container-fluid p-0 m-0 fixed">
+  <div class=" p-0 m-0 fixed">
     <div class="row p-0 m-0">
-      <div class="col container-fluid content-container">
-        <div class="row sticky-top tab-header">
-          <div class="container">
-            <img
-              src="~static/img/topbar.jpg"
-              alt="MetaCyberGirl"
-              class="align-self-center"
-            >
-          </div>
+      <div class="col">
+        <div class="row justify-content-center  sticky-top tab-header cc">
+          <!-- <div class="col-xs-12 col-md-4 align-self-center hb-text">
+            <h6>Hi There, I'm</h6>
+            <h1>MetaCyberGirl</h1>
+          </div> -->
         </div>
-        <div class="row ps-y-16 ps-x-16 sticky-top tab-header" />
       </div>
     </div>
-
+    <section>
+      <div class="container py-lg-5 py-md-4 py-m-4 py-3">
+        <div class="row align-item-center justify-content-center">
+          <div class="col-lg-6 my-3">
+            <img
+              class="img-fluid"
+              src="~static/img/mcgirl2.jpg"
+              alt="mcger"
+            >
+          </div>
+          <div class="col-lg-6 align-self-center my-3">
+            <div class="w-box">
+              <h3>MCG Girl Avatar</h3>
+              <h5 class="author">
+                明成君
+              </h5>
+              <p class="lead">
+                Each MCG girl avatar you own is unique, and when she belongs to you, all of her copyrights will be owned exclusively by you.
+              </p>
+              <p class="lead">
+                And those who previously owned or have owned any NFT in this compilation will be entitled to MCGER status in our Discord community, and when you do, you will have the opportunity to get an airdrop of the new NFT series we will launch later. 2000 MCG Girl avatars in total
+              </p>
+              <button
+                type="button"
+                class="btn btn-warning btn-bar"
+              >
+                <a
+                  class="px-btn"
+                  href="https://opensea.io/collection/metacybergirl"
+                >View on OpenSea</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- <notification-modal
       v-if="showNotification"
       @close="onNotificationClose"
@@ -127,15 +158,6 @@ export default class Index extends Vue {
 <style lang="scss" scoped>
 @import "~assets/css/theme/_theme";
 
-.p-bg {
-  position: "absolute";
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .sticky-top {
   &.tab-header {
     top: $navbar-local-height !important;
@@ -148,42 +170,58 @@ export default class Index extends Vue {
     overflow-y: scroll;
   }
 }
-.category {
-  background-color: light-color("700");
-  box-sizing: border-box;
 
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
-  .count {
-    color: dark-color("300") !important;
-  }
+.hb-text h6 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #fff;
 }
-.search-box {
-  max-width: 264px;
+
+.hb-text h1 {
+  font-size: 80px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.cc {
+  background-color: #d9ded8; //#e599bc;
+  min-height: 800px;
+  background-image: url(~static/img/home-bar.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.img-fluid {
   width: 100%;
-}
-.dropdown-filter,
-.search-box {
-  height: 44px;
+  height: auto;
+  box-shadow: -5px 2px 9px #afafaf;
 }
 
-.sidebar-container {
-  padding: 12px !important;
-  max-width: 348px;
-  height: 100%;
-  border-right: 1px solid light-color("500");
-  height: 90vh;
-  border-right: 1px solid #f3f4f7;
-  overflow-y: scroll;
+.w-box {
+  // padding-top: 40px;
+}
 
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+.px-btn {
+  color: #fff;
+}
+
+.btn-bar {
+  background: #ed9b18;
+}
+
+.btn-bar:hover {
+  background: #c867c7;
+}
+
+.lead {
+  color: #5e6472;
+  font-size: 16px;
+}
+
+.author {
+  color: #79dfd1;//#3a8f96;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {

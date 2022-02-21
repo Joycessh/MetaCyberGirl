@@ -3,7 +3,7 @@
     class="navbar navbar-expand-lg fixed-top p-0"
     role="navigation"
   >
-    <div class="container h-100">
+    <div class="container-fluid h-100">
       <div class="row mx-auto ps-x-16 w-100 h-100">
         <nuxt-link
           class="logo-container d-flex"
@@ -596,7 +596,10 @@ export default class Navbar extends Vue {
     margin-left: 12px;
 
     .logo-title {
-      color: #3291e9;
+      color: #000;//#3291e9;
+      font-weight: bold;
+      // font-weight: 700;
+      font-size: 21px;
     }
     .logo-product-name {
       color: dark-color("300");
@@ -619,7 +622,7 @@ export default class Navbar extends Vue {
   height: $navbar-local-height;
   background-color: light-color("700");
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-  opacity: 0.8;
+  // opacity: 0.8;
 
   .navbar-toggler {
     outline: none;

@@ -1,15 +1,16 @@
 <template>
   <div class="container-fluid p-0">
-    <particles-bg
+    <!-- <particles-bg
       type="fountain"
       :bg="true"
-    />
+    /> -->
     <navbar-section />
     <div class="content-container">
       <div class="nuxt-section">
         <nuxt />
       </div>
     </div>
+    <footer-bar />
     <toast />
   </div>
 </template>
@@ -17,13 +18,15 @@
 <script>
 import NavbarSection from '~/components/navbar'
 import Toast from '~/components/toast'
-import { ParticlesBg } from 'particles-bg-vue'
+import FooterBar from '~/components/footer-bar'
+// import { ParticlesBg } from 'particles-bg-vue'
 
 export default {
   components: {
     NavbarSection,
     Toast,
-    ParticlesBg,
+    FooterBar,
+    // ParticlesBg,
   },
 
   created() {
@@ -32,16 +35,16 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped="true">
+<style lang="scss" scope="true">
 @import "~assets/css/theme/_theme";
 
 .nuxt-section {
-  margin-top: $navbar-local-height;
+  // margin-top: $navbar-local-height;
 }
 
 .logo-container {
   height: 100px;
-  background-color: theme-color("primary");
+  //background-color: theme-color("primary");
 }
 
 .logo {
@@ -52,7 +55,7 @@ export default {
   height: 24px;
 }
 .content-container {
-  margin-top: $navbar-local-height;
+  // margin-top: $navbar-local-height;
 }
 
 @media (max-width: 768px) {
