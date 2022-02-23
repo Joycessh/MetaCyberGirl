@@ -12,7 +12,7 @@
               <a href="#"><i class="ti-pinterest" /></a>
             </div>
           </div> -->
-          <div class="col-md-12 my-2 text-center">
+          <div class="col-md-6 my-2 text-center text-md-right">
             <p>© 2022 copyright all right reserved</p>
           </div>
         </div>
